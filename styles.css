@@ -1,22 +1,85 @@
 body {
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-color: #222;
     box-sizing: border-box;
 }
+
 .banner {
-background-color: #fff;
-width: 300px;
-height: 150px;
-border-radius: 10px;
-position: relative;
-text-align: center;
+    background-color: #fff;
+    width: 300px;
+    height: 150px;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
 }
+.banner h1 {
+    font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+    font-weight: 700;
+    margin: 0;
+    font-size: 2rem;
+}
+
+.banner p {
+    font-family: 'Open Sans', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+    font-weight: 400;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.banner h2 {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-weight: 700;
+    margin: 0;
+    font-size: 1.25rem;
+}
+
 .pin {
-position:absolute;
-top: -150px;
-left: 45%;
-background-color: #fff;
+    position: absolute;
+    top: -150px;
+    left: 45%;
+    color: #fff;
+}
+
+.lines {
+    position: relative;
+    top: 150px;
+    background-color: #ccc;
+}
+
+.lines::before {
+    content: "";
+    display: block;
+    width: 158px;
+    height: 2px;
+    left:7%;
+    background-color: #ddd;
+    position:absolute;
+    top:-220px;
+    transform: rotate(120deg);
+}
+
+.lines::after {
+    content: "";
+    display: block;
+    width: 158px;
+    height: 2px;
+    right:13%;
+    background-color: #ddd;
+    position:absolute;
+    top:-220px;
+    transform: rotate(-120deg);
+}
+
+.banner:hover {
+    transform:rotate(-10deg)
+}
+.banner img {
+    width: 80px;
+    position:absolute;
+    right:-40px;
+    top:-50px;
+    transform:rotate(30deg);
 }
